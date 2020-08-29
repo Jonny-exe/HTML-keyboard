@@ -6,7 +6,11 @@ A modular visual interactive keyboard for webpages, including HTML, CSS and Java
 # Description
 
 This is a small HTML-CSS-Javascript combo I wrote to display a keyboard in a webpage. 
-You can customize it through the CSS file.
+
+# Features
+
+- You can customize it through the CSS file.
+- The keys are highlighted on the screen as you type.
 
 # Screenshots
 
