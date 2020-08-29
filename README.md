@@ -6,6 +6,7 @@ A modular visual interactive keyboard for webpages, including HTML, CSS and Java
 # Description
 
 This is a small HTML-CSS-Javascript combo I wrote to display a keyboard in a webpage. 
+It's a qwerty layout by default, but you can change it in the html.
 
 # Features
 
