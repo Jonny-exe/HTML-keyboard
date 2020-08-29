@@ -1,8 +1,6 @@
-//
-// HTML-keyboard/keyboard.css
-//
+/* HTML-keyboard/keyboard.css */
 
-:root { // only used to hold our CSS variables
+:root { /* only used to hold our CSS variables */
   /*change color to change the letters blink color*/
   --blink-color: rgb(130 , 130, 130);
   /*change color to change the letters background color*/
