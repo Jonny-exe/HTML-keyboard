@@ -1,0 +1,15 @@
+.keys {
+  border: 1px solid rgb(45, 45, 45);
+  text-align: center;
+  width: 70px;
+  height: 40px;
+  vertical-align: baseline;
+  background-color: rgb(170, 170, 170);
+  border-radius: 3px;
+  font-family: Franklin Gothic;
+}
+
+.margin {
+  align-items: center;
+  margin: auto;
+}
