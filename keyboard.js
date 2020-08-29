@@ -15,7 +15,7 @@ document.body.addEventListener('keydown', function(event) {
 });
 
 function changeKeyColor(lastKey) {
-  //  lastKey = lastKey.toLowerCase();
+  //change this to change the color that appears when you press a key
   document.getElementById(lastKey).style.backgroundColor = "#828282";
 
   setTimeout(function() {
