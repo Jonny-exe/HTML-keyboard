@@ -13,3 +13,12 @@
   align-items: center;
   margin: auto;
 }
+
+.windows {
+  height: 60%;
+  width: 35%;
+}
+
+.space {
+  width: 94%;
+}
