@@ -1,15 +1,30 @@
-.keys {
+//
+// HTML-keyboard/keyboard.css
+//
+
+:root { // only used to hold our CSS variables
+  /*change color to change the letters blink color*/
+  --blink-color: rgb(130 , 130, 130);
+  /*change color to change the letters background color*/
+  --back-color: rgb(170, 170, 170);
   /*change color to change the letters foreground color*/
-  color: black;
+  --fore-color: black;
+}
+
+.keys::selection {
+  background: var(--blink-color);
+  // color: not-used;
+}
+
+.keys {
+
+  color: var(--fore-color);
   border: 1px solid rgb(45, 45, 45);
   text-align: center;
   width: 70px;
   height: 40px;
   vertical-align: baseline;
-  /*Change this to change the keys background color, */
-  /*Don't forget to change the js file 23 line as well */
-  /* setting it to the same color*/
-  background-color: rgb(170, 170, 170);
+  background-color: var(--back-color);
   border-radius: 3px;
   font-family: Franklin Gothic;
 }
