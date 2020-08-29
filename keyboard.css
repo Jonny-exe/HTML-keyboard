@@ -6,7 +6,9 @@
   width: 70px;
   height: 40px;
   vertical-align: baseline;
-  /*change this to change the keys background color*/
+  /*Change this to change the keys background color, */
+  /*Don't forget to change the js file 23 line as well */
+  /* setting it to the same color*/
   background-color: rgb(170, 170, 170);
   border-radius: 3px;
   font-family: Franklin Gothic;

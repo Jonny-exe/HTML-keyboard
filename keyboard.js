@@ -19,6 +19,7 @@ function changeKeyColor(lastKey) {
   document.getElementById(lastKey).style.backgroundColor = "#828282";
 
   setTimeout(function() {
+    //this color should be the same as the CSS background color
     document.getElementById(lastKey).style.backgroundColor = "#aaaaaa";
   }, 100);
 }
