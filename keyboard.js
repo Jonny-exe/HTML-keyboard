@@ -1,6 +1,8 @@
 //
 // HTML-keyboard/keyboard.js
 //
+// jshint esversion: 6
+
 
 document.body.addEventListener('keydown', function(event) {
   var keynum;
@@ -15,11 +17,12 @@ document.body.addEventListener('keydown', function(event) {
   return changeKeyColor(pressedKey);
 });
 
+
 function changeKeyColor(lastKey) {
   var keyelement = document.getElementById(lastKey);
   var keystyle = getComputedStyle(keyelement);
   var keyselectionstyle = getComputedStyle(keyelement, '::selection');
-  var backColor = keystyle.backgroundColor;  //the RGB value for background: e.g. rgb(12,34,56)
+  var backColor = keystyle.backgroundColor; //the RGB value for background: e.g. rgb(12,34,56)
   // console.log(backColor);
   var blinkColor = keyselectionstyle.backgroundColor; //the RGB value for blink: e.g. rgb(12,34,56)
   //console.log(blinkColor);
