@@ -1,8 +1,18 @@
 /* HTML-keyboard/keyboard.css */
+body {
+margin: auto;
+margin-top: 1%;
+margin-left: 1%;
 
-:root { /* only used to hold our CSS variables */
+}
+.HTML-keyboard {
+  max-width: 1800px;
+}
+
+:root {
+  /* only used to hold our CSS variables */
   /*change color to change the letters blink color*/
-  --blink-color: rgb(130 , 130, 130);
+  --blink-color: rgb(130, 130, 130);
   /*change color to change the letters background color*/
   --back-color: rgb(170, 170, 170);
   /*change color to change the letters foreground color*/
@@ -15,11 +25,10 @@
 }
 
 .keys {
-
   color: var(--fore-color);
   border: 1px solid rgb(45, 45, 45);
   text-align: center;
-  width: 70px;
+  width: 100%;
   height: 40px;
   vertical-align: baseline;
   background-color: var(--back-color);
@@ -27,10 +36,31 @@
   font-family: Franklin Gothic;
 }
 
+.keys {
+  min-width: 70px;
+  width: 100%;
+}
+.keyPad {
+  width: 110%;
+}
+
+.º {
+  width: 100%;
+}
+
 .margin {
   align-items: center;
   margin: auto;
 }
+
+.back {
+  width: 100%;
+}
+
+.bloq {
+  width: 110%;
+}
+
 
 .windows {
   height: 60%;
@@ -38,5 +68,260 @@
 }
 
 .space {
-  width: 94%;
+  width: 99%;
 }
+/*
+.HTML-keyboard {
+  display: grid;
+  grid-template-columns: repeat(45, 1fr);
+  grid-template-rows: 1fr 1.5fr 1.5fr 1.5fr 1.5fr ;
+  grid-template-areas:
+  "º º º one one one two two two three three three four four four five five five six six six seven seven seven eight eight eight nine nine nine null null null com com com exc exc exc back back back back back back "
+  "tab tab tab tab q q q w w w e e e r r r t t t y y y u u u i i i o o o p p p para para para parb parb parb parb enter enter enter enter"
+  "bloq bloq bloq bloq bloq a a a s s s d d d f f f g g g h h h j j j k k k l l l ñ ñ ñ braq braq braq braqb braqb braqb enter enter enter enter"
+  "mayus mayus mayus more more more z z z x x x c c c v v v b b b n n n m m m coma coma coma point point point minus minus minus mayusRight mayusRight mayusRight mayusRight mayusRight mayusRight mayusRight mayusRight mayusRight"
+  "control control control control win win win alt alt alt spac spac spac spac spac spac spac spac spac spac spac spac spac spac spac spac spac spac spac spac spac spac altGr altGr altGr winR winR winR Fn Fn Fn conR conR conR conR";
+}
+
+.º {
+  grid-area: º;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.seven {
+  grid-area: seven;
+}
+.eight {
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.null {
+  grid-area: null;
+}
+
+.com {
+  grid-area: com;
+}
+
+.exc {
+  grid-area: exc;
+}
+.back {
+  grid-area: back;
+}
+
+.tab {
+  grid-area: tab;
+}
+.q {
+  grid-area: q;
+}
+
+.w {
+  grid-area: w;
+}
+
+.e {
+  grid-area: e;
+}
+
+.r {
+  grid-area: r;
+}
+
+.t {
+  grid-area: t;
+}
+
+.y {
+  grid-area: y;
+}
+
+.u {
+  grid-area: u;
+}
+
+.i {
+  grid-area: i;
+}
+
+.o {
+  grid-area: o;
+}
+
+.p {
+  grid-area: p;
+}
+
+.para {
+  grid-area: para;
+}
+
+.parb {
+  grid-area: parb;
+}
+
+.enter {
+  grid-area: enter;
+}
+
+.bloq {
+  grid-area: bloq;
+}
+
+.a {
+  grid-area: a;
+}
+
+.s {
+  grid-area: s;
+}
+
+.d {
+  grid-area: d;
+}
+
+.f {
+  grid-area: f;
+}
+
+.g {
+  grid-area: g;
+}
+.h {
+  grid-area: h;
+}
+
+.j {
+  grid-area: j;
+}
+
+.k {
+  grid-area: k;
+}
+
+.l {
+  grid-area: l;
+}
+
+.ñ {
+  grid-area: ñ;
+}
+
+.braq {
+  grid-area: braq;
+}
+
+
+.braqb {
+  grid-area: braqb;
+}
+
+.mayus {
+  grid-area: mayus;
+}
+
+.more {
+  grid-area: more;
+}
+
+.z {
+  grid-area: z;
+}
+.x {
+  grid-area: x;
+}
+
+.c {
+  grid-area: c;
+}
+
+.v {
+  grid-area: v;
+}
+
+.b {
+  grid-area: b;
+}
+
+.n {
+  grid-area: n;
+}
+
+.m {
+  grid-area: m;
+}
+
+.coma {
+  grid-area: coma;
+}
+
+.point {
+  grid-area: point;
+}
+
+.minus {
+  grid-area: minus;
+}
+
+.mayusRight {
+  grid-area: mayusRight;
+}
+
+.control {
+  grid-area: control;
+}
+
+.win {
+  grid-area: win;
+}
+
+.alt {
+  grid-area: alt;
+}
+
+.spac {
+  grid-area: spac;
+}
+
+.altGr {
+  grid-area: altGr;
+}
+
+.winR {
+  grid-area: winR;
+}
+.Fn {
+  grid-area: Fn;
+}
+.conR {
+  grid-area: conR;
+}
+*/
