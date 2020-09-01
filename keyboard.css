@@ -34,12 +34,10 @@ margin-left: 1%;
   background-color: var(--back-color);
   border-radius: 3px;
   font-family: Franklin Gothic;
-}
-
-.keys {
   min-width: 70px;
   width: 100%;
 }
+
 .keyPad {
   width: 110%;
 }
@@ -51,10 +49,6 @@ margin-left: 1%;
 .margin {
   align-items: center;
   margin: auto;
-}
-
-.back {
-  width: 100%;
 }
 
 .bloq {
