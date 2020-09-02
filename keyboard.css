@@ -38,6 +38,17 @@ margin-left: 1%;
   width: 100%;
 }
 
+.keys:hover {
+  border: 1px solid rgb(45, 45, 45);
+  text-align: center;
+  width: 70px;
+  height: 40px;
+  vertical-align: baseline;
+  background-color: rgb(105, 105, 105);
+  border-radius: 3px;
+  width: 100%;
+}
+
 .keyPad {
   width: 110%;
 }
@@ -61,9 +72,6 @@ margin-left: 1%;
   width: 35%;
 }
 
-.space {
-  width: 99%;
-}
 /*
 .HTML-keyboard {
   display: grid;

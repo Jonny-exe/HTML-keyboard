@@ -2,9 +2,12 @@
 // HTML-keyboard/keyboard.js
 //
 // jshint esversion: 6
-export function setKeyboard() {
-  var div, table, cell;
-  div = document.getElementsByClassName('HTML-keyboard')[0];
+export function setKeyboard(id) {
+  var newDiv, newSpan, div, table, cell;
+  if( id == "" || id == null ) {
+    id = "HTML-keyboard";
+  }
+  div = document.getElementsByClassName(id)[0];
   table = document.createElement('table');
   div.appendChild(table);
   var keys = [
@@ -61,8 +64,8 @@ export function setKeyboard() {
     row1 += 1;
   }
 }
-setKeyboard();
 export function startKeyboard() {
+  var pressedKey;
   document.body.addEventListener('keydown', function(event) {
     var keynum;
     if (window.event) { // IE
@@ -76,10 +79,9 @@ export function startKeyboard() {
     return changeKeyColor(pressedKey);
   });
 }
-startKeyboard();
 
-export function startSetKeyboard() {
-  setKeyboard();
+export function startSetKeyboard(id) {
+  setKeyboard(id);
   startKeyboard();
 }
 
