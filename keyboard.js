@@ -2,106 +2,88 @@
 // HTML-keyboard/keyboard.js
 //
 // jshint esversion: 6
-function setKeyboard() {
-  var div, row, table, cell;
+export function setKeyboard() {
+  var div, table, cell;
   div = document.getElementsByClassName('HTML-keyboard')[0];
   table = document.createElement('table');
   div.appendChild(table);
-  row = table.insertRow(0);
-  row.setAttribute("class", "keyPadLines");
-  var rowKeys1 = ["º",'1','2','3','4','5','6','7','8','9','0',"'",'¡','BACK'];
-  for (let i = 0; i < rowKeys1.length; i++) {
-    newDiv = document.createElement('div');
-    newDiv.setAttribute("id", "220");
-    newDiv.setAttribute("class", "keys margin " + rowKeys1[i]);
-    cell = row.insertCell(i);
-    cell.appendChild(newDiv);
-    newSpan = document.createElement("SPAN");
-    newDiv.appendChild(newSpan);
-    newSpan.innerHTML = rowKeys1[i];
-    cell.colSpan = "3";
-  }
-  row = table.insertRow(1);
-  row.setAttribute("class", "keyPadLines");
-  var rowKeys2 = ["TAB",'Q','W','E','R','T','Y','U','I','O','P',"[",']','ENTER'];
-  for (let i = 0; i < rowKeys2.length; i++) {
-    newDiv = document.createElement('div');
-    newDiv.setAttribute("id", "220");
-    newDiv.setAttribute("class", "keys margin " + rowKeys2[i]);
-    cell = row.insertCell(i);
-    cell.appendChild(newDiv);
-    newSpan = document.createElement("SPAN");
-    newDiv.appendChild(newSpan);
-    newSpan.innerHTML = rowKeys2[i];
-    cell.colSpan = "3";
-    if( rowKeys2[i] == 'TAB') {cell.colSpan = "4";}
-  }
-  row = table.insertRow(2);
-  row.setAttribute("class", "keyPadLines");
-  var rowKeys3 = ["BLOQ MAYUS",'A','S','D','F','G','H','J','K','L','Ñ',"´",'Ç',''];
-  for (let i = 0; i < rowKeys3.length; i++) {
-    newDiv = document.createElement('div');
-    newDiv.setAttribute("id", "220");
-    newDiv.setAttribute("class", "keys margin " + rowKeys3[i]);
-    cell = row.insertCell(i);
-    cell.appendChild(newDiv);
-    newSpan = document.createElement("SPAN");
-    newDiv.appendChild(newSpan);
-    newSpan.innerHTML = rowKeys3[i];
-    cell.colSpan = "3";
-    if( rowKeys3[i] == 'BLOQ MAYUS') {cell.colSpan = "5";}
-  }
-  row = table.insertRow(3);
-  row.setAttribute("class", "keyPadLines");
-  var rowKeys4 = ["MAYUS",'<','Z','X','C','V','B','N','M',',','.','-','MAYUS'];
-  for (let i = 0; i < rowKeys4.length; i++) {
-    newDiv = document.createElement('div');
-    newDiv.setAttribute("id", "220");
-    newDiv.setAttribute("class", "keys margin " + rowKeys4[i]);
-    cell = row.insertCell(i);
-    cell.appendChild(newDiv);
-    newSpan = document.createElement("SPAN");
-    newDiv.appendChild(newSpan);
-    newSpan.innerHTML = rowKeys4[i];
-    cell.colSpan = "3";
-    if(i == 0) {cell.colSpan = "4";}//Left Mayus
-    if(i == rowKeys4.length - 1) {cell.colSpan = "8";}//Right Mayus
-  }
-  row = table.insertRow(4);
-  row.setAttribute("class", "keyPadLines");
-  var rowKeys5 = ["CONTROL",'⊞','ALT','SPACE','ALT GR','⊞','FN','CONTROL'];
-  for (let i = 0; i < rowKeys5.length; i++) {
-    newDiv = document.createElement('div');
-    newDiv.setAttribute("id", "220");
-    newDiv.setAttribute("class", "keys margin " + rowKeys5[i]);
-    cell = row.insertCell(i);
-    cell.appendChild(newDiv);
-    newSpan = document.createElement("SPAN");
-    newDiv.appendChild(newSpan);
-    newSpan.innerHTML = rowKeys5[i];
-    cell.colSpan = "3";
-    if(rowKeys5[i] == 'SPACE') {cell.colSpan = "21";}
-    if(i == 0) {cell.colSpan = "4";}//Left Control
-    if(i == rowKeys5.length - 1) {cell.colSpan = "4";}//Right Control
-
+  var keys = [
+    ["º", '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', "'", '¡', 'BACK'],
+    ["TAB", 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', "[", ']', 'ENTER'],
+    ["BLOQ MAYUS", 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Ñ', "´", 'Ç', ''],
+    ["MAYUS", '<', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '-', 'MAYUS'],
+    ["CONTROL", '⊞', 'ALT', 'SPACE', 'ALT GR', '⊞', 'FN', 'CONTROL']
+  ];
+  var ids = [
+    ["220", '49', '50', '51', '52', '53', '54', '55', '56', '57', '48', "222", '221', '8'],
+    ["9", '81', '87', '69', '82', '84', '89', '85', '73', '79', '80', "192", '171', '13'],
+    ["20", '65', '83', '68', '70', '71', '72', '74', '75', '76', '192', "222", '191', '13'],
+    ["16", '60', '90', '88', '67', '86', '66', '78', '77', '188', '190', '173', '16'],
+    ["17", '91', '18', '32', '18', '⊞', '91', '17']
+  ];
+  var row1 = 0;
+  for (let row = 0; row1 < 5; row++) {
+    row = table.insertRow(row1);
+    row.setAttribute("class", "keyPadLines");
+    for (let i = 0; i < keys[row1].length; i++) {
+      newDiv = document.createElement('div');
+      newDiv.setAttribute("class", "keys margin " + keys[row1][i]);
+      newDiv.setAttribute("id", ids[row1][i]);
+      cell = row.insertCell(i);
+      cell.appendChild(newDiv);
+      newSpan = document.createElement("SPAN");
+      newDiv.appendChild(newSpan);
+      newSpan.innerHTML = keys[row1][i];
+      cell.colSpan = "3";
+      console.log(keys[row1].length - 1);
+      if (row1 == 0 && i == keys[row1].length - 1) {
+        cell.colSpan = "6";
+      } //BACK
+      if (row1 == 1 && i == 0) {
+        cell.colSpan = "4";
+      } //BACK
+      if (row1 == 2 && i == 0) {
+        cell.colSpan = "5";
+      } //BLOCK MAYUS
+      if (row1 == 3 && i == 0) {
+        cell.colSpan = "3";
+      } //Left Mayus
+      if (row1 == 4 && i == 0) {
+        cell.colSpan = "4";
+      } //Left Control
+      if (row1 == 3 && i == keys[row1].length - 1) {
+        cell.colSpan = "8";
+      } //Right Mayus
+      if (row1 == 4 && i == 3) {
+        cell.colSpan = "21";
+      } //Space
+    }
+    row1 += 1;
   }
 }
 setKeyboard();
-document.body.addEventListener('keydown', function(event) {
-  var keynum;
-  if (window.event) { // IE
-    keynum = event.keyCode;
-  } else if (event.which) { // Netscape/Firefox/Opera
-    keynum = event.which;
-  }
-  //use something like charCodeAt to get the number.
-  pressedKey = String.fromCharCode(keynum);
-  pressedKey = pressedKey.charCodeAt();
-  return changeKeyColor(pressedKey);
-});
+export function startKeyboard() {
+  document.body.addEventListener('keydown', function(event) {
+    var keynum;
+    if (window.event) { // IE
+      keynum = event.keyCode;
+    } else if (event.which) { // Netscape/Firefox/Opera
+      keynum = event.which;
+    }
+    //use something like charCodeAt to get the number.
+    pressedKey = String.fromCharCode(keynum);
+    pressedKey = pressedKey.charCodeAt();
+    return changeKeyColor(pressedKey);
+  });
+}
+startKeyboard();
 
+export function startSetKeyboard() {
+  setKeyboard();
+  startKeyboard();
+}
 
-function changeKeyColor(lastKey) {
+export function changeKeyColor(lastKey) {
   var keyelement = document.getElementById(lastKey);
   var keystyle = getComputedStyle(keyelement);
   var keyselectionstyle = getComputedStyle(keyelement, '::selection');
