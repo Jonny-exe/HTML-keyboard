@@ -27,4 +27,5 @@ Here are some example screenshots:
 
 # Use it
 
-Fork and enjoy!
+- Fork :fork_and_knife: and enjoy!
+- If you like it please give it a :star: on Github :octocat:
