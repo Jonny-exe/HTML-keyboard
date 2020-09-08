@@ -3,20 +3,20 @@
 <html>
 <meta charset="UTF-8">
 <head>
-  <title>Keyboard</title>
+	<title>Keyboard</title>
 </head>
 <!-- Step 1: add the keyboard.css file -->
 <link id=link href="keyboard.css" rel="stylesheet" type="text/css" />
 <body>
-  <div class="HTML-keyboard"></div>
-  <!-- Step 2: import the module -->
-  <script type="module">
-    import {
-      startSetKeyboard
-    } from '/keyboard.js';
-    // Step 3: specify the ID of the element
-    //         where you want to place your keyboard
-    startSetKeyboard("HTML-keyboard");
-  </script>
+	<div class="HTML-keyboard"></div>
+	<!-- Step 2: import the module -->
+	<script type="module">
+		import {
+			startSetKeyboard
+		} from '/keyboard.js';
+		// Step 3: specify the ID of the element
+		//         where you want to place your keyboard
+		startSetKeyboard("HTML-keyboard");
+	</script>
 </body>
 </html>
